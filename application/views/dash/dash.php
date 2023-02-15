@@ -1,3 +1,12 @@
+<style>
+#bu-image {
+  
+  width: auto;
+  height: 50%;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  position: absolute;
+}
+</style>
 
 <body>
 
@@ -67,16 +76,12 @@
             <img src="<?php echo base_url('')?>assets/img/Right Arrow lg.png" alt="">
           </a>
         </div>
+        <div class="col-md-6  my-auto mx-auto">
+            <img src="<?php echo base_url('')?>assets/img/bu.png" id="bu-image" alt="">
+          </div>
       </div>
 
-      <img src="<?php echo base_url('')?>assets/img/bu.png" id="bu-image" alt="" class="position-absolute end-0 bottom-0">
-      <style>
-#bu-image {
-  width: auto;
-  height: 100%;
-
-}
-</style>
+        
       <img src="<?php echo base_url('')?>assets/img/Accsent 1.png" alt="" class=" accsent-img h-100 position-absolute top-0 start-0">
     </div>
   </section>
