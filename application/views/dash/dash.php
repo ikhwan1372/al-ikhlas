@@ -41,7 +41,6 @@
           </li>
         </ul>
         <div>
-          <a href="#"> <button class="button-primary">Daftar</button></a>
           <a href="<?php echo site_url('dashboa/login')?>"> <button class="button-secondary" >Masuk</button></a>
         </div>
       </div>
@@ -68,13 +67,9 @@
       <div class="row h-100">
         <div class="col-md-6 hero-tagline my-auto">
           <h1>PP.Al-Ikhlas</h1>
-          <p><span class="fw-bold">Rumah Impian</span> Hadir untuk temukan rumah terbaik untukmu, untuk di jual ataupun
-            di sewa dengan sumber terpercaya</p>
+          <p><span class="fw-bold"></span>Mencetak generasi qur’ani dan salafi yang berwawasan Al-qur’an dan 
+          kitab kitab ahlussunnah wal jama’ah yang berakhlaqul karimah</p>
 
-          <button class="button-lg-primary">Temukan Rumah</button>
-          <a href="#">
-            <img src="<?php echo base_url('')?>assets/img/Right Arrow lg.png" alt="">
-          </a>
         </div>
         <div class="col-md-6  my-auto mx-auto">
             <img src="<?php echo base_url('')?>assets/img/bu.png" id="bu-image" alt="">
@@ -93,194 +88,24 @@
       <div class="row">
         <div class="col-12  text-center">
           <h2>Sejarah</h2>
-          <span class="sub-title">Rumah impian hadir menjadi solusi bagi kamu</span>
+          <span class="sub-title">                Berdirinya pondok pesantren putra putri Al – Ikhlas Bahrul ‘Ulum Tambakberas Jombang merupakan salah satu bentuk perhatian para pengasuh pesantren bahrul ulum khususnya KH. M.Djamaluddin Achmad beserta keluarga. Pondok yang berdiri tahun 1998dan berjalan fungsi kegiatannya pada tahun 1999 yang diamanatkan pada menantu dan putri beliau, Agus H. Hasyim Yusuf dan Hj. Lathifah Hidayaty. Pada awalnya bertujuan untuk memberikan pendidikan baik Al-Qur’an, Keagamaan serta seni Hadroh pada masyarakat sekitar pesantren. tidak seperti pada umumnya pesantren yang mana santrinya menetap, santri pondok pesantren putra putri Al – Ikhlas Bahrul ‘Ulum Tambakberas Jombang pada periode awal hanya nglowo (malam di pondok dan pagi pulang ke rumah masing masing). Namun seiring waktu semakin bertambah kepercayaan dan animo luar kota maupun luar jawa. Maka beliau KH. Djamaluddin Achmad memberi izin pada menantu dan putrinya untuk menerima santri santri yang berkeinginan tinggal di pesantren. pesantren yang berdiri sejak 1999 selalu berusaha meningkatkan dan menumbuhkembangkan pendidikan pesantren dengan pendidikan ilmu ilmu Al-Qur’an dan pendididkan salaf Ahlussunnah agar terbentuk santri yang berakhlaqul karimah, berilmu dan terampil
+</span><br><br><br>
+<h2>Visi & Misi</h2>
+<p><span class="sub-title">Visi</span> 
+Mencetak generasi qur’ani dan salafi yang berwawasan Al-qur’an dan kitab kitab ahlussunnah wal jama’ah yang berakhlaqul karimah</p>
+
+<p><span class="sub-title">Misi</span> 
+a)      Mencetak santri agar hafal Al-Qur’an dan bisa memahami dan mengamalkan kitab kitab salaf.
+b)      Menyelenggarakan pendidikan dengan kurikulum pesantren yang berwawasan Al-Qur’an dan kitab salaf/kitab kuning .
+c)       Membimbing santri membaca Al-Qur’an dengan baik dan benar, baik secara binnadzri dan bil ghoib.
+d)      Memberikan pendidikan agama kepada santri melalui madrasah diniyyah dan madrasah Al-Qur’an
+e)      Membina santri untuk berbudi luhur dalam kehidupan sehari hari.
+f)       Mempersiapkan santri yang mandiri dan mampu menginternalisasi nilai nilai islam dalam kehidupan sehari hari dalam masyarakat.
+
         </div>
       </div>
 
-      <div class="row mt-5">
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="<?php echo base_url('')?>assets/img/Icon-propertybaru.png" alt=""
-                class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Property baru</h3>
-            <p class="mt-3">Rumah impian kini jadi kenyataan, beli
-              rumah baru dengan fasilitas terbaik dengan
-              lingkungan yang nyaman.</p>
-          </div>
-        </div>
-
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="<?php echo base_url('')?>assets/img/Icon Sewa.png" class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Sewa Rumah</h3>
-            <p class="mt-3">Sewa rumah yang indah untuk keluarga anda pilihan terbaik untuk tempat tinggal keluarga mu
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-4 text-center">
-          <div class="card-layanan">
-            <div class="circle-icon position-relative mx-auto">
-              <img src="<?php echo base_url('')?>assets/img/Icon Beli.png" alt="" class="position-absolute top-50 start-50 translate-middle">
-            </div>
-            <h3 class="mt-4">Beli Rumah</h3>
-            <p class="mt-3">Beli rumah sempurna dengan harga terbaik kualitas terjamin dari sumber terpercaya</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </section>
-
-  <!-- Search Section -->
-  <section id="search" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2>
-            Temukan Rumah Impianmu
-          </h2>
-
-          <p >
-            Sekarang anda dapat menghemat semua hal stress, waktu, dan biaya tersembunyi dengan ratusan rumah untuk anda
-          </p>
-          <div class="col-10 mx-auto mt-5">
-
-            <nav>
-              <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#jual"
-                  type="button" role="tab" aria-controls="nav-home" aria-selected="true">Jual</button>
-                <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#sewa" type="button"
-                  role="tab" aria-controls="nav-profile" aria-selected="false">Sewa</button>
-                <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#propertybaru"
-                  type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Property baru</button>
-              </div>
-            </nav>
-            <div class="tab-content" id="nav-tabContent">
-              <div class="tab-pane fade show active" id="jual" role="tabpanel" aria-labelledby="nav-home-tab">
-                <!-- Dropdown tipe rumah -->
-                <div class="input-group input-cari mb-3">
-                  <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <img src="<?php echo base_url('')?>assets/img/Home Icon.png" alt="">
-                    Tipe Rumah</button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                  <!-- Dropdown range harga -->
-                  <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    <img src="<?php echo base_url('')?>assets/img/Money-icon.png" alt="">
-                    Range harga</button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Separated link</a></li>
-                  </ul>
-                  <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                    placeholder="Cari Bedasarkan lokasi, ID, Property">
-                  <button class="button-primary" type="button" id="button-addon2">Cari</button>
-                </div>
-
-              </div>
-              <div class="tab-pane fade" id="sewa" role="tabpanel" aria-labelledby="nav-profile-tab">
-                <div class="tab-pane fade show active" id="jual" role="tabpanel" aria-labelledby="nav-home-tab">
-                  <!-- Dropdown tipe rumah -->
-                  <div class="input-group input-cari mb-3">
-                    <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <img src="<?php echo base_url('')?>assets/img/Home Icon.png" class="d-blok d-lg-inline mx-auto" alt="">
-                      Tipe Rumah</button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                    <!-- Dropdown range harga -->
-                    <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <img src="<?php echo base_url('')?>assets/img/Money-icon.png"class="d-blok d-lg-inline mx-auto" alt="">
-                      Range harga</button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                      placeholder="Cari Bedasarkan lokasi, ID, Property">
-                    <button class="button-primary" type="button" id="button-addon2">Cari</button>
-                  </div>
-
-                </div>
-              </div>
-              <div class="tab-pane fade" id="propertybaru" role="tabpanel" aria-labelledby="nav-contact-tab">
-                <div class="tab-pane fade show active" id="jual" role="tabpanel" aria-labelledby="nav-home-tab">
-                  <!-- Dropdown tipe rumah -->
-                  <div class="input-group input-cari mb-3">
-                    <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <img src="<?php echo base_url('')?>assets/img/Home Icon.png" alt="">
-                      Tipe Rumah</button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                    <!-- Dropdown range harga -->
-                    <button class="button-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                      aria-expanded="false">
-                      <img src="<?php echo base_url('')?>assets/img/Money-icon.png" alt="">
-                      Range harga</button>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Action</a></li>
-                      <li><a class="dropdown-item" href="#">Another action</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      <li>
-                        <hr class="dropdown-divider">
-                      </li>
-                      <li><a class="dropdown-item" href="#">Separated link</a></li>
-                    </ul>
-                    <input type="text" class="form-control" aria-label="Text input with dropdown button"
-                      placeholder="Cari Bedasarkan lokasi, ID, Property">
-                    <button class="button-primary" type="button" id="button-addon2">Cari</button>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-
-
   </section>
 
   <!-- Rekomendasi Section -->
@@ -288,7 +113,7 @@
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center">
-          <h2>Rekomendasi Rumah Untuk Mu</h2>
+          <h2>Keunggulan</h2>
         </div>
       </div>
 
@@ -446,7 +271,7 @@
     <div class="container position-relative">
       <div class="row mb-4">
         <div class="col-9">
-          <h2>Fitur Rumah</h2>
+          <h2>Galeri</h2>
         </div>
         <div class="col-3">
           <button class="button-fitur">Lihat Semua...

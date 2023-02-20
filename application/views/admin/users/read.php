@@ -43,17 +43,19 @@
                                 <tr>
                                     <td><?= $nomorUrut; ?></td>
                                     <td><?= $id; ?></td>
-                                    <td><?= $photo; ?></td>
+                                    <td>
+                                        <img value <?= $photo; ?>></img>
+                                    </td>
                                     <td><?= $name; ?></td>
                                     <td><?= $username; ?></td>
                                     <td><?= $email; ?></td>
                                     <td><?= $level; ?></td>
                                     <td></td>
                                     <td>
-                                            <a href="<?= base_url(); ?>dash/edit/<?= $id; ?>"
+                                            <a href="<?= base_url(); ?>dashboa/update/<?= $id; ?>"
                                                 class="btn btn-warning btn-sm">Edit</a>
                                                 <button
-                                                onclick="clickHapus('<?= base_url() ?>dash/delete/<?= $id; ?>')"
+                                                onclick="clickHapus('<?= base_url() ?>dashboa/delete/<?= $id; ?>')"
                                                 class="btn btn-danger btn-sm">Hapus</button>
                                         </td>
                                 </tr>

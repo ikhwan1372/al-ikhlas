@@ -17,7 +17,7 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body">
 
-
+                    
                         <form action="<?= base_url(); ?>dashboa/proses_add" method="post">
 
 
@@ -25,6 +25,11 @@
                                 <div class="form-group col-md-6">
                                     <label for="name">Nama User</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukan nama User" autofocus required>
+                                    <form method="post" action="<?php echo base_url('dashboa/proses_add'); ?>" enctype="multipart/form-data">
+                                    <br>
+                                        <label for="image">Choose Image</label>
+                                        <input type="file" name="image" id="image" class="form-control-file">
+                                    
                                 </div>
 
                             </div>

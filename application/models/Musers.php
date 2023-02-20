@@ -26,4 +26,12 @@ class Musers extends CI_Model{
         $querySql = $this->db->query($sql);
         return $querySql->result_array();
     }
+
+    public function cekid($id)
+    {
+        $sql = "SELECT * FROM user WHERE id='$id'";
+        $querySql = $this->db->query($sql);
+        return $querySql->result_array();
+    }
+    
 }
