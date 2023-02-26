@@ -18,8 +18,7 @@
                     <div class="card-body">
 
                     
-                        <form action="<?= base_url(); ?>dashboa/proses_add" method="post">
-
+                        <form action="<?= base_url(); ?>dashboa/proses_add" method="post" enctype="multipart/form-data">
 
                             <div class="form-row">
                                 <div class="form-group col-md-6">
@@ -28,7 +27,7 @@
                                     <form method="post" action="<?php echo base_url('dashboa/proses_add'); ?>" enctype="multipart/form-data">
                                     <br>
                                         <label for="image">Choose Image</label>
-                                        <input type="file" name="image" id="image" class="form-control-file">
+                                        <input type="file" name="photo" id="photo" class="form-control-file">
                                     
                                 </div>
 

@@ -1,7 +1,7 @@
 
 <div class="footer">
     <div class="copyright">
-      <p>Copyright © Designed &amp; Developed by <a href="<?php echo base_url('') ?>../index.htm" target="_blank">DexignLab</a> 2021</p>
+      <p>Copyright © Designed &amp; Developed by <a href="" target="_blank">DexignLab</a> 2021</p>
     </div>
   </div>
   <!--**********************************
@@ -28,6 +28,7 @@
   <script src="<?php echo base_url('') ?>js/dlabnav-init.js"></script>
   <script src="<?php echo base_url('') ?>js/demo.js"></script>
   <script src="<?php echo base_url('') ?>js/styleSwitcher.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 </body>
 

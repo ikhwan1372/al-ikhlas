@@ -76,7 +76,7 @@
             <span class="nav-text">Dashboard</span>
           </a>
           <ul aria-expanded="false">
-            <li><a href="<?php echo base_url('') ?>">Project</a></li>
+            <li><a href="<?php echo base_url('dashboa/dasha') ?>">Project</a></li>
           </ul>
 
         </li>
