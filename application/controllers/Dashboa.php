@@ -85,6 +85,9 @@ class Dashboa extends CI_Controller
 		// proses upload
 		$config['upload_path'] = './assets/img/upload-user';
 		$config['allowed_types'] = 'jpg|jpeg|png';
+		$config['max_size'] = 1024;
+		$config['max_width'] = 1024;
+		$config['max_height'] = 768;
 		
 		$filename = uniqid() . '_' . $_FILES['photo']['name'];
 		$config['file_name'] = $filename;
@@ -190,9 +193,20 @@ class Dashboa extends CI_Controller
 			redirect('dashboa/user');
 			exit();
 		}
-
-		// membuat notifikasi sementara
-		$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Proses Lambat! Ulangi lagi','error')</script>");
+	
+		// hapus data
+		$ids = explode(',', $getId_user);
+		foreach ($ids as $id) {
+			$hapus = $this->Musers->hapusUser($id);
+		}
+	
+		if ($hapus) {
+			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Data berhasil dihapus','success')</script>");
+		} else {
+			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Data gagal dihapus! Ulangi lagi','error')</script>");
+		}
+	
 		redirect('dashboa/user');
 	}
+	
 }

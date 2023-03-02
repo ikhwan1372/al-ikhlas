@@ -28,7 +28,10 @@
   <script src="<?php echo base_url('') ?>js/dlabnav-init.js"></script>
   <script src="<?php echo base_url('') ?>js/demo.js"></script>
   <script src="<?php echo base_url('') ?>js/styleSwitcher.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!-- Tambahkan link dan script untuk memuat library SweetAlert dari server CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.js"></script>
+
 
 </body>
 

@@ -1,3 +1,10 @@
+<style>
+  .photo{
+    max-width: 55px; /* lebar maksimum gambar */
+    max-height: 52px; /* tinggi maksimum gambar */
+  }
+</style>
+
 <div class="content-body">
     <!-- row -->
     <div class="container-fluid">
@@ -43,11 +50,7 @@
                                     <td><?= $nomorUrut; ?></td>
                                     <td><?= $id; ?></td>
                                     <td>
-                                    <img src="<?= $gambar_path . "/" . $photo ?>
-                                    " alt="<?= $photo ?>"
-                                    $gambar_path = "<?= base_url(); ?>assets/img/upload-user";>
-
-
+                                        <img class="photo" src="<?= base_url(); ?>assets/img/upload-user/<?= $photo ?>" alt="<?= base_url(); ?>assets/img/upload-user/<?= $photo ?>">
                                     </td>
                                     <td><?= $name; ?></td>
                                     <td><?= $username; ?></td>
@@ -77,30 +80,25 @@
 
     </div>
 </div>
-
-
+</script>
+<!-- Tambahkan script untuk menjalankan function clickHapus() -->
 <script>
-    // perintah untuk, ketika html sudah di load semua oleh browser maka kode javascript didalamnya akan dijalankan
-    document.addEventListener('DOMContentLoaded', function() {
-        // const liidmenu = document.getElementById('');
-        const idmenu = document.getElementById('musers');
-        // const idsubmenu = document.getElementById('');
-        // liidmenu.classList.add('menu-open');
-        idmenu.classList.add('active');
-        // idsubmenu.classList.add('active');
+  function clickHapus(url) {
+    // Tampilkan SweetAlert untuk konfirmasi penghapusan data
+    Swal.fire({
+      title: 'Anda yakin ingin menghapus data ini?',
+      text: "Data yang dihapus tidak dapat dikembalikan!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Ya, hapus!',
+      cancelButtonText: 'Batal'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Lakukan aksi hapus data dari database
+        window.location.href = url;
+      }
     })
-
-    function clickHapus(url) {
-        Swal.fire({
-            title: 'Hapus Data',
-            text: "Data akan dilakukan",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Ya...Hapus'
-        }).then((result) => {
-            if (result.isConfirmed) window.location = url;
-        })
-    }
+  }
 </script>

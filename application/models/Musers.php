@@ -1,10 +1,10 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Musers extends CI_Model{
+class Musers extends CI_Model
+{
     public function getData()
-    {
-        {
+    { {
             $sql = "SELECT * FROM `user`";
             $querySql = $this->db->query($sql);
             return $querySql->result_array();
@@ -33,5 +33,11 @@ class Musers extends CI_Model{
         $querySql = $this->db->query($sql);
         return $querySql->result_array();
     }
-    
+
+    public function hapususer($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('user');
+        return $this->db->affected_rows() > 0;
+    }
 }
