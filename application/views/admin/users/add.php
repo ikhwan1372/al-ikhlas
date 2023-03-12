@@ -28,6 +28,7 @@ foreach ($dt as $value) {
                                         <br>
                                         <label for="image">Choose Image</label>
                                         <input type="file" name="photo" id="photo" class="form-control-file">
+                                        <img id="preview" src="#" alt="Preview" style="display:none; max-width: 200px; max-height: 200px; margin-top: 10px;" />
 
                                 </div>
 
@@ -63,7 +64,7 @@ foreach ($dt as $value) {
                             </div>
                             <?php 
                             echo"<pre>"
-                            
+
                             ?>
                         </form>
                     </div>
@@ -89,4 +90,21 @@ function togglePasswordVisibility() {
     document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye");
   }
 }
+</script>
+
+<script>
+    var input = document.getElementById("photo");
+    var preview = document.getElementById("preview");
+
+    input.addEventListener("change", function() {
+        var file = this.files[0];
+        var reader = new FileReader();
+
+        reader.addEventListener("load", function() {
+            preview.style.display = "block";
+            preview.setAttribute("src", this.result);
+        });
+
+        reader.readAsDataURL(file);
+    });
 </script>

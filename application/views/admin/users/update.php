@@ -1,16 +1,28 @@
+<style>
+  .photo{
+    max-width: 55px; /* lebar maksimum gambar */
+    max-height: 52px; /* tinggi maksimum gambar */
+  }
+</style>
+    
     <?php
     // var_dump($dt);
     $renderLvl = '';
-    foreach ($dt as $value) {
-        $lvl = $value['level'];
-        if($lvl == $sek){
-            $renderSelected = 'selected';
-            //jika kondisi terpenuhi
-        }else{
-            //jika kondisi tidak terpenuhi
-            $renderSelected = '';
-        }
+    $listlevel = [
+        [
+            "Level" => "super admin"
+        ],
+        [
+            "Level" => "admin"
+        ],
 
+    ];
+    foreach ($listlevel as $value) {
+        $lvl = $value['Level'];
+        $renderSelected = ''; // set awal menjadi kosong
+        if($lvl == $level){ // jika sesuai kondisi
+            $renderSelected = 'selected'; // set nilai menjadi 'selected'
+        }
         $renderLvl .= "<option $renderSelected value=\"$lvl\">$lvl</option>";
     }
     
@@ -37,10 +49,12 @@
                                 </div>
                                 <div class="form-group ">
                                     <label for="image">Choose Image</label>
-                                    <input type="file" name="photo" id="photo" class="form-control-file">
+                                    <input type="file" name="photo" id="photo" class="form-control-file"/> 
+                                    <img class="photo" src="<?= base_url(); ?>assets/img/upload-user/<?= $photo ?>" alt="..."/>   
+                                    
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group"> 
                                 <label for="username">Username</label>
                                 <input type="text" class="form-control" id="username" value="<?= $username; ?>" name="username" placeholder="Username tidak boleh sama dengan yang sudah ada " required>
                             </div>
@@ -51,7 +65,7 @@
                             <div class="form-group">
                                 <label for="password">Password:</label>
                                 <div class="input-group">
-                                    <input type="password" id="password" name="password" value="<?= $username; ?>"  class="form-control">
+                                    <input type="password" id="password" name="password" value="<?= $password; ?>"  class="form-control">
                                     <div class="input-group-append">
                                         <span class="input-group-text">
                                             <i class="fa fa-eye password-toggle" aria-hidden="true" onclick="togglePasswordVisibility()"></i>

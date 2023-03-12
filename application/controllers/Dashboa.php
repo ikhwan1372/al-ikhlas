@@ -50,6 +50,7 @@ class Dashboa extends CI_Controller
 
 		$data['id'] = $cek[0]['id'];
 		$data['name'] = $cek[0]['name'];
+		$data['photo'] = $cek[0]['photo'];
 		$data['username'] = $cek[0]['username'];
 		$data['email'] = $cek[0]['email'];
 		$data['password'] = $cek[0]['password'];
@@ -99,9 +100,9 @@ class Dashboa extends CI_Controller
 
 		if (!$this->upload->do_upload('photo')) {
 			$meesageError = $this->upload->display_errors();
-			echo "<pre>";
-			var_dump($meesageError);
-			die();
+			// echo "<pre>";
+			// var_dump($meesageError);
+			// die();
 			// ketika error apa yang kamu lakukan
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','".$this->upload->display_errors()."','error')</script>");
 			redirect('dashboa/user?ket='.$meesageError);
@@ -136,6 +137,7 @@ class Dashboa extends CI_Controller
 		$name = htmlspecialchars($this->input->post('name'), ENT_QUOTES);
 		$username = htmlspecialchars($this->input->post('username'), ENT_QUOTES);
 		$email = htmlspecialchars($this->input->post('email'), ENT_QUOTES);
+		$password = htmlspecialchars($this->input->post('password'), ENT_QUOTES);
 		$level = htmlspecialchars($this->input->post('level'), ENT_QUOTES);
 
 
@@ -148,12 +150,6 @@ class Dashboa extends CI_Controller
 			exit();
 		}
 
-		if ($this->Musers->update('username', 'id')) {
-			// membuat notifikasi sementara
-			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Edit Data Berhasil disimpan','success')</script>");
-			redirect('admin/users');
-			exit();
-		}
 		// proses upload
 		$config['upload_path'] = './assets/img/upload-user';
 		$config['allowed_types'] = 'jpg|jpeg|png';
@@ -169,18 +165,24 @@ class Dashboa extends CI_Controller
 		$config['file_name'] = $filename;
 
 		$this->load->library('upload', $config);
-
+		// echo "<pre>";
+		// var_dump();
+		// die();
 		if (!$this->upload->do_upload('photo')) {
+			
 			$meesageError = $this->upload->display_errors();
-			echo "<pre>";
-			var_dump($meesageError);
-			die();
+			// echo "<pre>";
+			// var_dump($);
+			// die();
 			// ketika error apa yang kamu lakukan
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','".$this->upload->display_errors()."','error')</script>");
 			redirect('dashboa/user?ket='.$meesageError);
 			exit();
+			
 		} else {
+			
 			$dataSimpan = [
+				
 				"photo" => $filename,
 				"name" => $name,
 				"username" => $username,
@@ -189,10 +191,9 @@ class Dashboa extends CI_Controller
 				"level" => $level
 
 			];
-
 			$jadi = array_merge($dataSimpan);
 
-			if ($this->Musers->add('user', $jadi)) {
+			if ($this->Musers->update('user', $jadi)) {
 				// membuat notifikasi sementara
 				$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Tambah Data Berhasil disimpan','success')</script>");
 				redirect('dashboa/user');
