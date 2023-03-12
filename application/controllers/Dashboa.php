@@ -52,9 +52,9 @@ class Dashboa extends CI_Controller
 		$data['name'] = $cek[0]['name'];
 		$data['username'] = $cek[0]['username'];
 		$data['email'] = $cek[0]['email'];
-		$data['password'] = $cek[0]['email'];
+		$data['password'] = $cek[0]['password'];
 		$data['level'] = $cek[0]['level'];
-		
+
 		$this->load->view('admin/headera', $data);
 		$this->load->view('admin/users/update');
 		$this->load->view('admin/footera');
@@ -64,7 +64,6 @@ class Dashboa extends CI_Controller
 
 	public function proses_add()
 	{
-
 		// menerima inputan dari bagian view
 		// $photo = ($this->input->post('photo'));
 		$name = htmlspecialchars($this->input->post('name'), ENT_QUOTES);
@@ -72,7 +71,6 @@ class Dashboa extends CI_Controller
 		$email = htmlspecialchars($this->input->post('email'), ENT_QUOTES);
 		$password = htmlspecialchars($this->input->post('password'), ENT_QUOTES);
 		$level = htmlspecialchars($this->input->post('level'), ENT_QUOTES);
-		
 
 
 		// cek username tidak boleh sama
@@ -86,30 +84,41 @@ class Dashboa extends CI_Controller
 		// proses upload
 		$config['upload_path'] = './assets/img/upload-user';
 		$config['allowed_types'] = 'jpg|jpeg|png';
-		$config['max_size'] = 1024;
-		$config['max_width'] = 1024;
-		$config['max_height'] = 768;
-		
-		$filename = uniqid() . '_' . $_FILES['photo']['name'];
+		$config['max_size'] = 2048; // 2 MB
+		date_default_timezone_set('Asia/Jakarta');
+
+		$date = date('YmdHis');
+		$micro_time = microtime(true);
+		$micro_time_array = explode(".", $micro_time);
+		$micro_time_array[1] = substr($micro_time_array[1], 0, 6);
+		$micro_time = implode("", $micro_time_array);
+		$filename = $date . $micro_time . '.' . pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 		$config['file_name'] = $filename;
-	
+
 		$this->load->library('upload', $config);
-	
+
 		if (!$this->upload->do_upload('photo')) {
+			$meesageError = $this->upload->display_errors();
+			echo "<pre>";
+			var_dump($meesageError);
+			die();
 			// ketika error apa yang kamu lakukan
+			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','".$this->upload->display_errors()."','error')</script>");
+			redirect('dashboa/user?ket='.$meesageError);
+			exit();
 		} else {
 			$dataSimpan = [
-				"photo" =>$filename,
+				"photo" => $filename,
 				"name" => $name,
 				"username" => $username,
 				"password" => $password,
 				"email" => $email,
 				"level" => $level
-	
+
 			];
-	
+
 			$jadi = array_merge($dataSimpan);
-	
+
 			if ($this->Musers->add('user', $jadi)) {
 				// membuat notifikasi sementara
 				$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Tambah Data Berhasil disimpan','success')</script>");
@@ -117,11 +126,6 @@ class Dashboa extends CI_Controller
 				exit();
 			}
 		}
-
-
-		// membuat notifikasi sementara
-		$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Proses Lambat! Ulangi lagi','error')</script>");
-		redirect('dashboa/user');
 	}
 
 	public function proses_update()
@@ -153,29 +157,41 @@ class Dashboa extends CI_Controller
 		// proses upload
 		$config['upload_path'] = './assets/img/upload-user';
 		$config['allowed_types'] = 'jpg|jpeg|png';
-		$config['max_size'] = 1024;
-		$config['max_width'] = 1024;
-		$config['max_height'] = 768;
-		
-		$filename = uniqid() . '_' . $_FILES['photo']['name'];
+		$config['max_size'] = 2048; // 2 MB
+		date_default_timezone_set('Asia/Jakarta');
+
+		$date = date('YmdHis');
+		$micro_time = microtime(true);
+		$micro_time_array = explode(".", $micro_time);
+		$micro_time_array[1] = substr($micro_time_array[1], 0, 6);
+		$micro_time = implode("", $micro_time_array);
+		$filename = $date . $micro_time . '.' . pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
 		$config['file_name'] = $filename;
-	
+
 		$this->load->library('upload', $config);
-	
+
 		if (!$this->upload->do_upload('photo')) {
+			$meesageError = $this->upload->display_errors();
+			echo "<pre>";
+			var_dump($meesageError);
+			die();
 			// ketika error apa yang kamu lakukan
+			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','".$this->upload->display_errors()."','error')</script>");
+			redirect('dashboa/user?ket='.$meesageError);
+			exit();
 		} else {
 			$dataSimpan = [
-				"photo" =>$filename,
+				"photo" => $filename,
 				"name" => $name,
 				"username" => $username,
+				"password" => $password,
 				"email" => $email,
 				"level" => $level
-	
+
 			];
-	
+
 			$jadi = array_merge($dataSimpan);
-	
+
 			if ($this->Musers->add('user', $jadi)) {
 				// membuat notifikasi sementara
 				$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Tambah Data Berhasil disimpan','success')</script>");
@@ -183,11 +199,6 @@ class Dashboa extends CI_Controller
 				exit();
 			}
 		}
-
-
-		// membuat notifikasi sementara
-		$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Proses Lambat! Ulangi lagi','error')</script>");
-		redirect('dashboa/user');
 	}
 
 	public function delete($getId_user = "0")
@@ -199,20 +210,19 @@ class Dashboa extends CI_Controller
 			redirect('dashboa/user');
 			exit();
 		}
-	
+
 		// hapus data
 		$ids = explode(',', $getId_user);
 		foreach ($ids as $id) {
 			$hapus = $this->Musers->hapusUser($id);
 		}
-	
+
 		if ($hapus) {
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Data berhasil dihapus','success')</script>");
 		} else {
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Data gagal dihapus! Ulangi lagi','error')</script>");
 		}
-	
+
 		redirect('dashboa/user');
 	}
-	
 }

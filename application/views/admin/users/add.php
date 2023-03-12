@@ -61,7 +61,10 @@ foreach ($dt as $value) {
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
+                            <?php 
+                            echo"<pre>"
                             
+                            ?>
                         </form>
                     </div>
 
