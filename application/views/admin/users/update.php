@@ -36,7 +36,7 @@
 
                 <div class="card card-primary card-outline">
                     <div class="card-body">
-                        <form action="<?= base_url(); ?>dashboa/proses_update" method="post" enctype="multipart/form-data">
+                        <form action="<?= base_url(); ?>dashboa/proses_update/<?= $id; ?>" method="post" enctype="multipart/form-data">
                             <div class="form-row">
 
                             <div class="form-group">
