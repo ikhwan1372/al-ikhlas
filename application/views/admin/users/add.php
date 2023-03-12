@@ -41,7 +41,6 @@
                                 <input type="email" class="form-control" id="email" name="email" 
                                 placeholder="example@gmail.com"required>
                             </div>
-
                             <div class="form-group">
                                 <label for="sekolah">level</label>
                                 <select class="form-select" aria-label="Default select example" id="level" name="level">

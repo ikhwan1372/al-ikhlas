@@ -37,7 +37,7 @@ class Dashboa extends CI_Controller
 		$this->load->view('admin/footera');
 	}
 
-	public function update()
+	public function update($getId_user = "0")
 	{
 		// cek id user
 		$cek = $this->Musers->cekId($getId_user);
@@ -49,13 +49,11 @@ class Dashboa extends CI_Controller
 
 
 		$data['id'] = $cek[0]['id'];
-		$data['photo'] = $cek[0]['photo'];
 		$data['name'] = $cek[0]['name'];
 		$data['username'] = $cek[0]['username'];
 		$data['email'] = $cek[0]['email'];
 		$data['level'] = $cek[0]['level'];
-
-		$data['dt'] = $this->Musers->getData();
+		
 		$this->load->view('admin/headera', $data);
 		$this->load->view('admin/users/update');
 		$this->load->view('admin/footera');
@@ -126,58 +124,62 @@ class Dashboa extends CI_Controller
 	{
 
 		// menerima inputan dari bagian view
-		$id = htmlspecialchars($this->input->post('id'), ENT_QUOTES);
-		$photo = htmlspecialchars($this->input->post('photo'), ENT_QUOTES);
+		// $photo = ($this->input->post('photo'));
 		$name = htmlspecialchars($this->input->post('name'), ENT_QUOTES);
 		$username = htmlspecialchars($this->input->post('username'), ENT_QUOTES);
 		$email = htmlspecialchars($this->input->post('email'), ENT_QUOTES);
 		$level = htmlspecialchars($this->input->post('level'), ENT_QUOTES);
 
-		$cek = $this->Musers->cekUsername($username, $id);
+
+		// cek username tidak boleh sama
+		$cek = $this->Musers->cekUsername($username);
 		if (count($cek) >= 1) {
 			// membuat notifikasi sementara
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Pemberitahuan','Maaf username ini telah ada','error')</script>");
-			redirect('dashboa/add');
+			redirect('dashboa/update');
 			exit();
 		}
 
-		$dataSimpan = [
-			"photo" => $photo,
-			"name" => $name,
-			"username" => $username,
-			"email" => $email,
-			"level" => $level
-
-		];
-
-		$jadi = array_merge($dataSimpan);
-
-		if ($this->Musers->update('user', $jadi, 'id', $id)) {
+		if ($this->Musers->update('username', 'id')) {
 			// membuat notifikasi sementara
-			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Tambah Data Berhasil disimpan','success')</script>");
-			redirect('dashboa/user');
+			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Edit Data Berhasil disimpan','success')</script>");
+			redirect('admin/users');
 			exit();
 		}
-		//choose image
-		{
-			$config['upload_path'] = '<?base_url?>assets/img/'; // path to upload folder
-			$config['allowed_types'] = 'gif|jpg|png';
-			$config['max_size'] = 1024; // maximum size in kilobytes
-
-			$this->load->library('upload', $config);
-
-			if (!$this->upload->proses_add('photo')) {
-				// handle upload error
+		// proses upload
+		$config['upload_path'] = './assets/img/upload-user';
+		$config['allowed_types'] = 'jpg|jpeg|png';
+		$config['max_size'] = 1024;
+		$config['max_width'] = 1024;
+		$config['max_height'] = 768;
+		
+		$filename = uniqid() . '_' . $_FILES['photo']['name'];
+		$config['file_name'] = $filename;
+	
+		$this->load->library('upload', $config);
+	
+		if (!$this->upload->do_upload('photo')) {
+			// ketika error apa yang kamu lakukan
+		} else {
+			$dataSimpan = [
+				"photo" =>$filename,
+				"name" => $name,
+				"username" => $username,
+				"email" => $email,
+				"level" => $level
+	
+			];
+	
+			$jadi = array_merge($dataSimpan);
+	
+			if ($this->Musers->add('user', $jadi)) {
+				// membuat notifikasi sementara
+				$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Tambah Data Berhasil disimpan','success')</script>");
+				redirect('dashboa/user');
+				exit();
 			}
-
-			$data = $this->upload->data();
-
-			// insert image data to database
-			$photo = $data['file_name'];
-			$this->db->insert('photo', array('name' => $photo));
-
-			redirect('photo');
 		}
+
 
 		// membuat notifikasi sementara
 		$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Proses Lambat! Ulangi lagi','error')</script>");

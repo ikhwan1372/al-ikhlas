@@ -228,6 +228,82 @@ h2 {
 
 }
 
+/* Berita session */
+#carouselExampleIndicators {
+    margin-top: 30px;
+  }
+  
+  /* Gaya untuk judul pada carousel */
+  .carousel-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  /* Gaya untuk gambar pada carousel */
+  .carousel-item img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Gaya untuk tombol navigasi pada carousel */
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: transparent;
+    border-color: #333;
+    width: 5%;
+    height: 100%;
+    opacity: 0.5;
+    transition: opacity 0.15s ease-in-out;
+  }
+  
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    opacity: 1;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-image: none;
+  }
+  
+  .carousel-control-prev-icon:before {
+    content: '<';
+    font-family: Arial;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .carousel-control-next-icon:before {
+    content: '>';
+    font-family: Arial;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  /* Gaya untuk titik navigasi pada carousel */
+  .carousel-indicators {
+    bottom: -40px;
+  }
+  
+  .carousel-indicators li {
+    background-color: #333;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  .carousel-indicators .active {
+    background-color: #999;
+    width: 16px;
+    height: 16px;
+    margin: 0 3px;
+  }
+
 /* search session */
 
 #search {
@@ -380,6 +456,13 @@ h2 {
     font-size: 48px;
     font-weight: 500;
 }
+
+.card-fitur img {
+    width: 337px;
+    height: 481px;
+
+}
+
 
 .card-fitur h5 {
     color: #fff;

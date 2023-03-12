@@ -16,6 +16,14 @@ class Musers extends CI_Model
         return $this->db->affected_rows(); // 0 atau 1
     }
 
+    public function update($tb, $data, $kolom, $nilai)
+    {
+        $this->db->where($kolom, $nilai);
+        $this->db->update($tb, $data);
+        return $this->db->affected_rows(); // 0 atau 1
+    }
+
+
     public function cekUsername($username, $id = "")
     {
         if ($id == '') {
