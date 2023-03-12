@@ -81,7 +81,6 @@
 
     </div>
 </div>
-</script>
 <!-- Tambahkan script untuk menjalankan function clickHapus() -->
 <script>
   function clickHapus(url) {

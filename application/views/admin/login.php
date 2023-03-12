@@ -24,14 +24,14 @@
         <div class="login-box">
             
             <div class="card-contact h-50 w-50 align-center">
-                <form>
+                <form action="">
                     <h2>Login</h2>
                     <div class="form-floating mb-3">
                         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput" class="d-flex align-items-center">Masukan email anda</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput" class="d-flex align-items-center">Password anda</label>
                     </div>
                     <button type="submit" class="button-kontak">Masuk</button>

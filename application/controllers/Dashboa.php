@@ -52,6 +52,7 @@ class Dashboa extends CI_Controller
 		$data['name'] = $cek[0]['name'];
 		$data['username'] = $cek[0]['username'];
 		$data['email'] = $cek[0]['email'];
+		$data['password'] = $cek[0]['email'];
 		$data['level'] = $cek[0]['level'];
 		
 		$this->load->view('admin/headera', $data);

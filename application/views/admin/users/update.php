@@ -49,6 +49,17 @@
                                 <input type="email" class="form-control" id="email" value="<?= $email; ?>" name="email" placeholder="example@gmail.com" required>
                             </div>
                             <div class="form-group">
+                                <label for="password">Password:</label>
+                                <div class="input-group">
+                                    <input type="password" id="password" name="password" value="<?= $username; ?>"  class="form-control">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">
+                                            <i class="fa fa-eye password-toggle" aria-hidden="true" onclick="togglePasswordVisibility()"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
                                 <label for="level">Level</label>
                                 <select class="form-select" aria-label="Default select example" id="level" value="<?= $level; ?>" name="level">
                                     <option selected>--Pilih Level--</option>
@@ -65,3 +76,18 @@
         </div>
     </div><!-- /.container-fluid -->
 </div>
+
+<script>
+function togglePasswordVisibility() {
+  var passwordInput = document.getElementById("password");
+  if (passwordInput.type === "password") {
+    passwordInput.type = "text";
+    document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye");
+    document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye-slash");
+  } else {
+    passwordInput.type = "password";
+    document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye-slash");
+    document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye");
+  }
+}
+</script>
