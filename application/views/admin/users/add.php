@@ -1,11 +1,11 @@
 <?php
-    // var_dump($dt);
-    $renderLvl = '';
-    foreach ($dt as $value) {
-        $lvl = $value['level'];
-        $renderLvl .= "<option value=\"$lvl\">$lvl</option>";
-    }
-    
+// var_dump($dt);
+$renderLvl = '';
+foreach ($dt as $value) {
+    $lvl = $value['level'];
+    $renderLvl .= "<option value=\"$lvl\">$lvl</option>";
+}
+
 ?>
 
 <div class="content">
@@ -17,7 +17,7 @@
                 <div class="card card-primary card-outline">
                     <div class="card-body">
 
-                    
+
                         <form action="<?= base_url(); ?>dashboa/proses_add" method="post" enctype="multipart/form-data">
 
                             <div class="form-row">
@@ -25,10 +25,10 @@
                                     <label for="name">Nama User</label>
                                     <input type="text" class="form-control" id="name" name="name" placeholder="Masukan nama User" autofocus required>
                                     <form method="post" action="<?php echo base_url('dashboa/proses_add'); ?>" enctype="multipart/form-data">
-                                    <br>
+                                        <br>
                                         <label for="image">Choose Image</label>
                                         <input type="file" name="photo" id="photo" class="form-control-file">
-                                    
+
                                 </div>
 
                             </div>
@@ -38,14 +38,17 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">email</label>
-                                <input type="email" class="form-control" id="email" name="email" 
-                                placeholder="example@gmail.com"required>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
                             </div>
                             <div class="form-group">
-                                <label for="sekolah">level</label>
+                                <label for="email">password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="level">level</label>
                                 <select class="form-select" aria-label="Default select example" id="level" name="level">
                                     <option selected>--Pilih Level--</option>
-                                    <?php echo $renderLvl;?>
+                                    <?php echo $renderLvl; ?>
                                 </select>
                             </div>
                             <div class="form-group">

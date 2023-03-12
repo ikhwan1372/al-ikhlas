@@ -16,7 +16,6 @@
       <a class="navbar-brand" href="#">
         <img src="<?php echo base_url('') ?>assets/img/bu.png" alt="" width="30" class="d-inline-block align-text-top me-3">
         Al-Ikhlas
-
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -145,43 +144,44 @@
 
 
   <!-- Fitur Section -->
-  <section id="fitur" class="mt-5">
+  <section id="fitur" style="height: 69rem;">
     <div class="container">
-      <div class="row mb-4">
-        <div class="col-9">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
           <h2>Berita</h2>
         </div>
-        <div class="col-12">
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div class="row">
+          <div class="col-12 mb-4 position-relative">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="<?php echo base_url('') ?>assets/img/cangkruk1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="<?php echo base_url('') ?>assets/img/cangkruk1.jpg"  class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg"  class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
       </div>
     </div>
-
 
     <!-- <div class="container position-relative">
         <div class="row">
@@ -268,18 +268,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>
@@ -292,18 +292,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>
@@ -316,18 +316,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>
@@ -340,18 +340,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>
@@ -364,18 +364,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>
@@ -388,18 +388,18 @@
               <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
             </div>
             <div class="card-fasilitas d-flex justify-content-between px-4">
-              <span>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
                 <p>Kamar Tidur</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
                 <p>Kamar Mandi</p>
-              </span>
-              <span>
+              </div>
+              <div>
                 <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
                 <p>Luas Rumah</p>
-              </span>
+              </div>
             </div>
 
           </div>

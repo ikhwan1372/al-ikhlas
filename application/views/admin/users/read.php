@@ -25,6 +25,7 @@
                             <th scope="col">nama</th>
                             <th scope="col">username</th>
                             <th scope="col">email</th>
+
                             <th scope="col">level</th>
                             <th style="width: 10px">#</th>
                             <th style="width: 40px">Aksi</th>

@@ -69,7 +69,9 @@ class Dashboa extends CI_Controller
 		$name = htmlspecialchars($this->input->post('name'), ENT_QUOTES);
 		$username = htmlspecialchars($this->input->post('username'), ENT_QUOTES);
 		$email = htmlspecialchars($this->input->post('email'), ENT_QUOTES);
+		$password = htmlspecialchars($this->input->post('password'), ENT_QUOTES);
 		$level = htmlspecialchars($this->input->post('level'), ENT_QUOTES);
+		
 
 
 		// cek username tidak boleh sama
@@ -99,6 +101,7 @@ class Dashboa extends CI_Controller
 				"photo" =>$filename,
 				"name" => $name,
 				"username" => $username,
+				"password" => $password,
 				"email" => $email,
 				"level" => $level
 	

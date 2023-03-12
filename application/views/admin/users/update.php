@@ -20,7 +20,7 @@
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-6">
-                <h1 class="m-0">Halaman Tambah data</h1>
+                <h1 class="m-0">Halaman Update data</h1>
 
                 <div class="card card-primary card-outline">
                     <div class="card-body">
