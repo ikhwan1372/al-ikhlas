@@ -17,6 +17,9 @@
   <!-- Responsive style -->
   <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/responsive.css">
 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 
 
   <!-- Logo Title Bar -->

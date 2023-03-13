@@ -36,7 +36,7 @@
           </li>
         </ul>
         <div>
-          <a href="<?php echo site_url('dashboa/login') ?>"> <button class="button-secondary">Masuk</button></a>
+          <a href="<?php echo site_url('login') ?>"> <button class="button-secondary">Masuk</button></a>
         </div>
       </div>
     </div>

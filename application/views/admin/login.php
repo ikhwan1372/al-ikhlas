@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/style.css">
     <!-- Responsive style -->
     <link rel="stylesheet" href="<?php echo base_url('') ?>assets/css/responsive.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
 
 </head>
@@ -24,14 +26,14 @@
         <div class="login-box">
             
             <div class="card-contact h-50 w-50 align-center">
-                <form action="">
+            <form action="<?= base_url() ?>login/cek_login" method="post">
                     <h2>Login</h2>
                     <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput" class="d-flex align-items-center">Masukan email anda</label>
+                        <input type="text" class="form-control" name="username" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput" class="d-flex align-items-center">Masukan username anda</label>
                     </div>
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <input type="password" class="form-control" name="password" id="floatingInput" placeholder="name@example.com">
                         <label for="floatingInput" class="d-flex align-items-center">Password anda</label>
                     </div>
                     <button type="submit" class="button-kontak">Masuk</button>
@@ -56,3 +58,13 @@
 </body>
 
 </html>
+
+<?php if ($this->session->flashdata('error')): ?>
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Login Error',
+            text: '<?php echo $this->session->flashdata('error'); ?>',
+        });
+    </script>
+<?php endif; ?>

@@ -62,7 +62,7 @@
                                 <label for="email">Email</label>
                                 <input type="email" class="form-control" id="email" value="<?= $email; ?>" name="email" placeholder="example@gmail.com" required>
                             </div>
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="password">Password:</label>
                                 <div class="input-group">
                                     <input type="password" id="password" name="password" value="<?= $password; ?>"  class="form-control">
@@ -72,7 +72,7 @@
                                         </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="form-group">
                                 <label for="level">Level</label>
                                 <select class="form-select" aria-label="Default select example" id="level" value="<?= $level; ?>" name="level">
@@ -91,7 +91,7 @@
     </div><!-- /.container-fluid -->
 </div>
 
-<script>
+<!-- <script>
 function togglePasswordVisibility() {
   var passwordInput = document.getElementById("password");
   if (passwordInput.type === "password") {
@@ -104,4 +104,4 @@ function togglePasswordVisibility() {
     document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye");
   }
 }
-</script>
+</script> -->
