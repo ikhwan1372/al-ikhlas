@@ -27,6 +27,10 @@ class Login extends CI_Controller
 	}
     public function cek_login()
 	{
+		echo "<pre>";
+		var_dump($_SESSION);
+		die();
+
 		// menerima inputan dari bagian view
 		$username = htmlspecialchars($this->input->post('username'), ENT_QUOTES);
 		$password = htmlspecialchars($this->input->post('password'), ENT_QUOTES);

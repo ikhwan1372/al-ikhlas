@@ -4,16 +4,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Dashboa extends CI_Controller
 {
 	// metode yang pertama kali dijalankan
-	// public function __construct()
-	// {
-	// 	parent::__construct();
-	// 	date_default_timezone_set("Asia/Jakarta");
-	// 	// keamaan admin panel, harus login terlebih dahulu
-	// 	$sessionId = $this->session->userdata('session_id');
-	// 	if ($sessionId == null) {
-	// 		redirect('dashboa');
-	// 	}
-	// }
+	public function __construct()
+	{
+		parent::__construct();
+		date_default_timezone_set("Asia/Jakarta");
+		// keamaan admin panel, harus login terlebih dahulu
+		$sessionId = $this->session->userdata('session_id');
+		if ($sessionId == null) {
+			redirect('dashboa');
+		}
+	}
 
 	public function index()
 	{
