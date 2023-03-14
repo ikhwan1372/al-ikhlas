@@ -11,7 +11,7 @@ class Dashboa extends CI_Controller
 		// keamaan admin panel, harus login terlebih dahulu
 		$sessionId = $this->session->userdata('session_id');
 		if ($sessionId == null) {
-			redirect('dashboa');
+			redirect('login');
 		}
 	}
 
@@ -37,6 +37,8 @@ class Dashboa extends CI_Controller
 	public function add()
 	{
 
+		$this->load->model('Musers');
+		$data['enum_values'] = $this->Musers->getEnumValues('user', 'level');
 		$data['dt'] = $this->Musers->getData();
 		$this->load->view('admin/headera', $data);
 		$this->load->view('admin/users/add');
@@ -118,7 +120,7 @@ class Dashboa extends CI_Controller
 			
 			// eckripsi password
 			$passwordEnkripsi = password_hash($password, PASSWORD_DEFAULT);
-			$session_id_user = $this->session->userdata('session_id');
+			// $session_id_user = $this->session->userdata('session_id');
 			$dataSimpan = [
 				"photo" => $filename,
 				"name" => $name,

@@ -35,7 +35,7 @@ foreach ($dt as $value) {
                             </div>
                             <div class="form-group">
                                 <label for="username"></label>
-                                <input type="text" class="form-control" id="username" name="username" placeholder="Username tidak boleh sama dengan yang sudah ada " required>  
+                                <input type="text" class="form-control" id="username" name="username" placeholder="Username tidak boleh sama dengan yang sudah ada " required>
                             </div>
                             <div class="form-group">
                                 <label for="email">email</label>
@@ -53,17 +53,18 @@ foreach ($dt as $value) {
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="level">level</label>
-                                <select class="form-select" aria-label="Default select example" id="level" name="level">
-                                    <option selected>--Pilih Level--</option>
-                                    <?php echo $renderLvl; ?>
+                                <label for="mycolumn">Level:</label>
+                                <select name="mycolumn" id="mycolumn">
+                                    <?php foreach ($enum_values as $enum_value) { ?>
+                                        <option value="<?php echo $enum_value ?>"><?php echo $enum_value ?></option>
+                                    <?php } ?>
                                 </select>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Simpan</button>
                             </div>
-                            <?php 
-                            echo"<pre>"
+                            <?php
+                            echo "<pre>"
 
                             ?>
                         </form>
@@ -78,18 +79,18 @@ foreach ($dt as $value) {
     </div><!-- /.container-fluid -->
 </div>
 <script>
-function togglePasswordVisibility() {
-  var passwordInput = document.getElementById("password");
-  if (passwordInput.type === "password") {
-    passwordInput.type = "text";
-    document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye");
-    document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye-slash");
-  } else {
-    passwordInput.type = "password";
-    document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye-slash");
-    document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye");
-  }
-}
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye");
+            document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            document.getElementsByClassName("password-toggle")[0].classList.remove("fa-eye-slash");
+            document.getElementsByClassName("password-toggle")[0].classList.add("fa-eye");
+        }
+    }
 </script>
 
 <script>

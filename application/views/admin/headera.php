@@ -4,10 +4,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title><?= $head_title ?? "APPS Default"; ?>    Hii Admin</title>
+  <title><?= $head_title ?? "APPS Default"; ?> Hii Admin</title>
 
   <!-- Style css -->
   <link href="<?php echo base_url('') ?>css/style.css" rel="stylesheet">
+  <!-- Tambahkan link dan script untuk memuat library SweetAlert dari server CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css">
 
 </head>
 
@@ -37,27 +39,30 @@
           <ul class="navbar-nav header-right">
             <li class="nav-item dropdown  header-profile">
               <a class="nav-link" href="<?php echo base_url('') ?>javascript:void(0);" role="button" data-bs-toggle="dropdown">
-                <img src="<?php echo base_url('') ?>images/user.jpg" width="56" alt="">
+
+                <img src="<?= base_url('assets/img/upload-user/' .
+                 $this->session->userdata('session_foto')) ?>" width="56" alt="">
               </a>
               <div class="dropdown-menu dropdown-menu-end">
-                <a href="<?php echo base_url('') ?>app-profile.html" class="dropdown-item ai-icon">
-                  <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" class="text-primary" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <a href="<?php echo base_url('') ?>dashboa/user" class="dropdown-item ai-icon">
+                  <svg id="icon-user1" xmlns="http://www.w3.org/2000/svg" 
+                  class="text-primary" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
-                  <div class="ms-2">Profile </div>
-                  
-                  <?= $this->session->userdata('session_namafull'); ?> __
-                        <?= $this->session->userdata('session_level'); ?>
+                  <div class="ms-2"></div>
 
-                <a href="<?php echo base_url('') ?>" class="dropdown-item ai-icon">
-                  <svg id="icon-logout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
-                    <polyline points="16 17 21 12 16 7"></polyline>
-                    <line x1="21" y1="12" x2="9" y2="12"></line>
-                  </svg>
-                  <div class="ms-2">Logout </div>
-                </a>
+                  <?= $this->session->userdata('session_username'); ?><br>
+                  <?= $this->session->userdata('session_level'); ?>
+
+                  <a href="<?php echo base_url('') ?>logout" class="dropdown-item ai-icon">
+                    <svg id="mnlogout" xmlns="http://www.w3.org/2000/svg" class="text-danger" width="18" height="18" viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                      <polyline points="16 17 21 12 16 7"></polyline>
+                      <line x1="21" y1="12" x2="9" y2="12"></line>
+                    </svg>
+                    <div class="ms-2">Logout </div>
+                  </a>
               </div>
             </li>
           </ul>
@@ -82,9 +87,7 @@
           <ul aria-expanded="false">
             <li><a href="<?php echo base_url('dashboa/dasha') ?>">Project</a></li>
           </ul>
-
         </li>
-
         <li><a class="has-arrow " href="<?php echo base_url('') ?>javascript:void()" aria-expanded="false">
             <i class="fas fa-info-circle"></i>
             <span class="nav-text">Apps</span>
@@ -99,7 +102,7 @@
             <span class="nav-text">Pages</span>
           </a>
           <ul aria-expanded="false">
-          <li><a href="<?php echo site_url('dashboa/user')?>">users</a></li>
+            <li><a href="<?php echo site_url('dashboa/user') ?>">users</a></li>
           </ul>
         </li>
       </ul>

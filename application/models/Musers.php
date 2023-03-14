@@ -48,4 +48,12 @@ class Musers extends CI_Model
         $this->db->delete('user');
         return $this->db->affected_rows() > 0;
     }
+
+    public function getEnumValues($table, $column) {
+        $result = $this->db->query("SHOW COLUMNS FROM $table WHERE Field = '$column'");
+        $row = $result->row();
+        preg_match_all("/'([\w\s]+)'/", $row->Type, $matches);
+        return $matches[1];
+      }
+    
 }

@@ -27,9 +27,8 @@ class Login extends CI_Controller
 	}
     public function cek_login()
 	{
-		echo "<pre>";
-		var_dump($_SESSION);
-		die();
+
+		
 
 		// menerima inputan dari bagian view
 		$username = htmlspecialchars($this->input->post('username'), ENT_QUOTES);
@@ -57,10 +56,14 @@ class Login extends CI_Controller
 			$ses = [
 				"session_id" => $cekUser[0]['id'],
 				"session_username" => $cekUser[0]['username'],
+				"session_foto" => $cekUser[0]['photo'],
 				"session_level" => $cekUser[0]['level']
 			];
 			// proses membuat session di CI3 pada php
 			$this->session->set_userdata($ses);
+			// echo "<pre>";
+			// var_dump($_SESSION);
+			// die();
 
 			// membuat notifikasi sementara
 			$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Berhasil','Selamat Datang di Web Al- Ikhlas!','success')</script>");
