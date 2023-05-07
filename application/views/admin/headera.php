@@ -103,6 +103,7 @@
           </a>
           <ul aria-expanded="false">
             <li><a href="<?php echo site_url('dashboa/user') ?>">users</a></li>
+            <li><a href="<?php echo site_url('berita/brt') ?>">berita</a></li>
           </ul>
         </li>
       </ul>

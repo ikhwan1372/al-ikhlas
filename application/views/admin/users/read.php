@@ -20,7 +20,6 @@
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">no</th>
-                            <th scope="col">id</th>
                             <th scope="col">photo</th>
                             <th scope="col">nama</th>
                             <th scope="col">username</th>
@@ -49,7 +48,6 @@
 
                                 <tr>
                                     <td><?= $nomorUrut; ?></td>
-                                    <td><?= $id; ?></td>
                                     <td>
                                         <img class="photo" src="<?= base_url(); ?>assets/img/upload-user/<?= $photo ?>" alt="<?= base_url(); ?>assets/img/upload-user/<?= $photo ?>">
                                     </td>

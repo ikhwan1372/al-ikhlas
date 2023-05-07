@@ -5,6 +5,9 @@
     height: 50%;
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
     position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
   }
 </style>
 
@@ -41,21 +44,6 @@
       </div>
     </div>
   </nav>
-  <!-- <nav class="navbar navbar-expand-lg navbar-dark ">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
-      Bootstrap
-    </a>
-  </div> -->
-  </nav>
-
-  <!-- <section id="carousel">
-  <div class="carousel">
-    <img class="slide" src=">assets/img/bu.png">
-  </div>
-</section> -->
-
   <!-- Hero session -->
   <section id="hero">
     <div class="container h-100">
@@ -103,46 +91,6 @@
     </div>
   </section>
 
-  <!-- Berita section -->
-
-  <!-- <section id="berita">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h2 class="carousel-title">Berita Terbaru</h2>
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
-            <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="<?php echo base_url('') ?>assets/img/cangkruk1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
-            </div>
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-
   <!-- Fitur Section -->
   <section id="fitur" style="height: 69rem;">
     <div class="container">
@@ -168,85 +116,13 @@
                 <div class="carousel-item">
                   <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
                 </div>
+                
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- <div class="container position-relative">
-        <div class="row">
-          <div class="col-12 d-flex justify-content-start">
-            <div class="card-fitur me-3 position-relative">
-              <img src="<?php echo base_url('') ?>assets/img/" alt="">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <span>Rumah minimalist Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-fitur me-3 position-relative">
-              <img src="<?php echo base_url('') ?>assets/img/Fitur Rumah 1.png" alt="">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>Kamar Tidur</h5>
-                  <span>Rumah minimalist Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-fitur me-3 position-relative">
-              <img src="<?php echo base_url('') ?>assets/img/Fitur Rumah 1.png" alt="">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>Kamar Tidur</h5>
-                  <span>Rumah minimalist Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card-fitur me-3 position-relative">
-              <img src="<?php echo base_url('') ?>assets/img/Fitur Rumah 1.png" alt="">
-
-              <div class="overlay position-absolute top-0 bottom-0 start-0 end-0 w-100 h-100">
-                <div class="position-absolute top-50 start-50 translate-middle text-center w-100">
-                  <h5>Kamar Tidur</h5>
-                  <span>Rumah minimalist Type-A2</span>
-                  <h6>IDR.200jt</h6>
-                  <button>Lihat Rumah</button>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-        <button class="button-arrow-left position-absolute start-0 top-50 translate-middle">
-          <img src="<?php echo base_url('') ?>assets/img/Left Arrow lg.png" alt="">
-        </button>
-
-        <button class="button-arrow-right position-absolute end-0 top-50 translate-middle">
-          <img src="<?php echo base_url('') ?>assets/img/Right Arrow.png" alt="">
-        </button>
-      </div> -->
     </div>
   </section>
 
