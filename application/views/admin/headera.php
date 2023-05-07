@@ -104,6 +104,8 @@
           <ul aria-expanded="false">
             <li><a href="<?php echo site_url('dashboa/user') ?>">users</a></li>
             <li><a href="<?php echo site_url('berita/brt') ?>">berita</a></li>
+            <li><a href="<?php echo base_url('galeri/gal') ?>">Galeri</a></li>
+            
           </ul>
         </li>
       </ul>

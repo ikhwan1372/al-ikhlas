@@ -132,7 +132,7 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('Musers', 'Mberita');
+$autoload['model'] = array('Musers', 'Mberita','Mgaleri');
 
 
 $autoload['css'] = array("style.css", "responsive.css");

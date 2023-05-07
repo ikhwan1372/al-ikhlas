@@ -117,6 +117,6 @@ class Berita extends CI_Controller
 		}
 		// membuat notifikasi sementara
 		$this->session->set_flashdata('notifikasi', "<script>Swal.fire('Gagal','Proses Lambat! Ulangi lagi','error')</script>");
-		redirect('admin/users/add');
+		redirect('admin/berita/addb');
 	}
 }
