@@ -73,10 +73,20 @@ body {
 
 #carousel {
     width: 100%;
-    height: 300px;
+    height: 750px;
     overflow: hidden;
     position: relative;
   }
+
+  .carousel img {
+    max-width: 100%; /* memastikan gambar tidak melebihi ukuran carousel */
+    max-height: 100%; /* memastikan gambar tidak melebihi ukuran carousel */
+    width: auto; /* menyesuaikan ukuran gambar secara otomatis */
+    height: auto; /* menyesuaikan ukuran gambar secara otomatis */
+    margin: auto; /* posisi gambar di tengah carousel */
+    display: block; /* menghilangkan space di bawah gambar */
+  }
+
   
   .carousel {
     position: absolute;
@@ -105,10 +115,7 @@ body {
 }
 
 
-/* img-bu{
-    width: 50%;
-    height: auto;
-} */
+
 
 .hero-tagline h1 {
 color: #fff;
@@ -190,206 +197,7 @@ h2 {
 
 }
 
-/* Hover */
-
-.card-layanan:hover {
-    width: 100%;
-    height: 313px;
-    border-radius: 5px;
-    background: linear-gradient(160deg, var(--pr-color), rgb(0, 0, 0));
-    padding: 40px;
-    box-shadow: 0 0 7px 3px rgba(0, 0, 0, 0,05);
-
-    transition: all .2s ease-in;
-
-}
-
-.card-layanan:hover .circle-icon {
-    background-color: #fff;
-    transition: all .2s ease-in;
-
-}
-
-
-
-.card-layanan:hover h3 {
-    color: #fff;
-    font-size: 24px;
-
-    transition: all .2s ease-in;
-
-}
-
-.card-layanan:hover p{
-    color: #fff;
-    font-size: 14px;
-
-    transition: all .3s ease-in;
-
-}
-
-/* Berita session */
-#carouselExampleIndicators {
-    margin-top: 30px;
-  }
-  
-  /* Gaya untuk judul pada carousel */
-  .carousel-title {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #333;
-  }
-  
-  /* Gaya untuk gambar pada carousel */
-  .carousel-item img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  /* Gaya untuk tombol navigasi pada carousel */
-  .carousel-control-prev,
-  .carousel-control-next {
-    background-color: transparent;
-    border-color: #333;
-    width: 5%;
-    height: 100%;
-    opacity: 0.5;
-    transition: opacity 0.15s ease-in-out;
-  }
-  
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    opacity: 1;
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-image: none;
-  }
-  
-  .carousel-control-prev-icon:before {
-    content: '<';
-    font-family: Arial;
-    font-size: 30px;
-    color: #333;
-  }
-  
-  .carousel-control-next-icon:before {
-    content: '>';
-    font-family: Arial;
-    font-size: 30px;
-    color: #333;
-  }
-  
-  /* Gaya untuk titik navigasi pada carousel */
-  .carousel-indicators {
-    bottom: -40px;
-  }
-  
-  .carousel-indicators li {
-    background-color: #333;
-    border-radius: 50%;
-    width: 12px;
-    height: 12px;
-    margin: 0 5px;
-    cursor: pointer;
-  }
-  
-  .carousel-indicators .active {
-    background-color: #999;
-    width: 16px;
-    height: 16px;
-    margin: 0 3px;
-  }
-
-/* search session */
-
-#search {
-    background-image: url(../img/Img-search.png);
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#search h2 {
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 72px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #fff;
-}
-
-#search p {
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 36px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #fff;
-}
-
-
-.input-cari {
-    height: 88px;
-}
-
-.input-cari:focus {
-    border: none;
-}
-
-.input-cari .button-secondary {
-    width: 200px;
-    height: 88px;
-    background-size: rgba(255,255,255,0,8);
-    color: var(--pr-color);
-    font-size: 18px;
-    font-weight: 500;
-    border: none;
-    border-radius: 0 0 0 10px;
-}
-
-.input-cari .button-primary {
-    height: 88px;
-    background-color: var(--pr-color);
-    color: #fff;
-    border: none;
-    font-size: 36px;
-    font-weight: 500;
-    border-radius: 0 10px 0 10px;
-}
-
-.nav-tabs {
-    border: none;
-}
-
-.nav-tabs .nav-link {
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 0 0 0 0;
-}
-
-.nav-tabs .nav-link.active {
-    background-color: rgba(255, 255, 255, 0.8);
-    color: var(--pr-color);
-    border-radius: 0 9px 0 0;
-    font-weight: 500;
-}
-
-.nav-tabs .nav-link {
-    color: #000;
-    border: nones;
-}
-
 /* Section Rekomendasi */
-.card {
-    height: 460px;
-    width: 95%;
-    border: none;
-}
 
 .card-body h4 {
     color: #000000;
@@ -409,11 +217,15 @@ h2 {
     box-shadow: 0 10px 20px rgba(0, 0, 0, .25);
     transition: all ease-in-out .3s;
 
+    transform: scale(1.1);
 }
 
-.card-hover .card-body h4 {
+
+
+.card-hover .card-body h4{
     color: #fff;
     transition: all ease-in-out .3s;
+    
 }
 
 .card-hover .card-body p {
@@ -423,7 +235,7 @@ h2 {
 
 .card-fasilitas{
     position: absolute;
-    right: 0;
+    right: 0;   
     left: 0;
     bottom: 10px;
     background-color: #fff;
@@ -442,33 +254,13 @@ h2 {
 
 /* Card Fasilitas */
 
-.button-fitur {
-    width: 238px;
-    height: 63px;
-    background-color: var(--pr-color);
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    color: #fff;
-}
 
 #fitur h2 {
     font-size: 48px;
     font-weight: 500;
 }
 
-.card-fitur img {
-    width: 337px;
-    height: 481px;
 
-}
-
-
-.card-fitur h5 {
-    color: #fff;
-    font-size: 36px;
-    font-weight: 600;
-}
 
 .card-fitur span {
     color: #fff;
@@ -481,45 +273,8 @@ h2 {
     font-weight: 600;
 }
 
-.card-fitur button {
-    background-color: var(--pr-color);
-    color: #fff;
-    border: none;
-    width: 150px;
-    height: 45px;
-    font-size: 18px;
-    font-weight: 500;
-}
 
-.card-fitur .overlay {
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
-    transition: all ease-in-out .3s;
-}
 
-.card-fitur .overlay:hover {
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: 1;
-}
-
-.button-arrow-left {
-    border: none;
-    border-radius: 50%;
-    width: 61px;
-    height: 61px;
-    background-color: var(--pr-color);
-    padding: 0;
-    
-}
-
-.button-arrow-right {
-    border: none;
-    border-radius: 50%;
-    width: 61px;
-    height: 61px;
-    background-color: var(--pr-color);
-    padding: 0;
-}
 
 /* section Contact */
 #contact {
@@ -575,13 +330,7 @@ h2 {
     text-decoration: none;
 }
 
-.card-contact {
-    width: 100%;
-    height: 445px;
-    background: #FFFFFF;
-    border-radius: 5px;
-    padding: 52px 48px;
-}
+
 
 .card-contact h2 {
     font-family: Poppins;

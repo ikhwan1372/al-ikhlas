@@ -1,9 +1,9 @@
 <style>
   .photo {
     max-width: 55px;
-    /* lebar maksimum gambar */
+    /* lebar maksimum gambar1 */
     max-height: 52px;
-    /* tinggi maksimum gambar */
+    /* tinggi maksimum gambar1 */
   }
 </style>
 
@@ -40,7 +40,7 @@
 
                 $id = $value['id'];
                 $judul = $value['judul'];
-                $gambar = $value['gambar'];
+                $gambar1 = $value['gambar1'];
                 $keterangan = $value['keterangan'];
                 $tgl_buat = $value['tgl_buat'];
             ?>
@@ -49,7 +49,7 @@
                   <td><?= $nomorUrut; ?></td>
                   <td><?= $judul; ?></td>
                   <td>
-                    <img class="photo" src="<?= base_url(); ?>assets/img/upload-gbr/<?= $gambar ?>" alt="<?= base_url(); ?>assets/img/upload-gbr/<?= $gambar ?>">
+                    <img class="photo" src="<?= base_url(); ?>assets/img/upload-gbr/<?= $gambar1 ?>" alt="<?= base_url(); ?>assets/img/upload-gbr/<?= $gambar1 ?>">
                   </td>
                   <td><?= $keterangan; ?></td>
                   <td><?= $tgl_buat; ?></td>

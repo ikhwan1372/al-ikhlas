@@ -18,7 +18,7 @@ class Berita extends CI_Controller
 	public function index()
 	{
 		$data['head_title'] = "Dashboard";
-
+		   
 		$this->load->view('admin/headera', $data);
 		$this->load->view('admin/dasha', $data);
 		$this->load->view('admin/footera', $data);
@@ -26,7 +26,7 @@ class Berita extends CI_Controller
 
 	public function brt()
 	{
-		$data['head_title'] = "Berita";
+		$data['head_title'] = "User dashboad";
 
 		$data['dt'] = $this->Mberita->getData();
 		$this->load->view('admin/headera', $data);

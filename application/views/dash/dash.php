@@ -93,41 +93,53 @@
 
   <!-- Fitur Section -->
   <section id="fitur" style="height: 69rem;">
-    <div class="container">
-      <div class="row mb-5">
-        <div class="col-12 text-center">
-          <h2>Berita</h2>
-        </div>
-        <div class="row">
-          <div class="col-12 mb-4 position-relative">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="<?php echo base_url('') ?>assets/img/cangkruk1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="<?php echo base_url('') ?>assets/img/cangkruk.jpg" class="d-block w-100" alt="...">
-                </div>
-                
-              </div>
+  <div class="container">
+    <div class="col-12 text-center">
+      <h2>Berita</h2>
+    </div>
+    <div class="row">
+      <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="<?php echo base_url('') ?>assets/img/cangkruk1.jpg" alt="Gambar 1">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Judul Berita 1</h5>
+              <p>Deskripsi singkat dari berita 1</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url('') ?>assets/img/kegiatan5.jpg" alt="Gambar 2">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Judul Berita 2</h5>
+              <p>Deskripsi singkat dari berita 2</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="<?php echo base_url('') ?>assets/img/rihla2.jpg" alt="Gambar 3">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Judul Berita 3</h5>
+              <p>Deskripsi singkat dari berita 3</p>
             </div>
           </div>
         </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </div>
-    </div>
-  </section>
+  </div>
+</section>
+
+
+
 
   <!-- Rekomendasi Section -->
-  <section id="rekomendasi">
+  <section id="galeri">
     <div class="container">
       <div class="row mb-5">
         <div class="col-12 text-center">
@@ -137,149 +149,67 @@
 
       <div class="row">
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi1.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/peringatan1.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
         </div>
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi2.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/rihla1.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
         </div>
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi3.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/kegiatan6.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
         </div>
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi4.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/ngajiabah.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
         </div>
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi5.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/kegiatan7.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
-        </div>
+        </div>        
         <div class="col-4 mb-4">
-          <div class="card p-2" style="width: 22rem;">
-            <img src="<?php echo base_url('') ?>assets/img/Rekomendasi6.png" alt="">
+          <div class="card p-2" style="width: 22rem; ">
+            <img src="<?php echo base_url('') ?>assets/img/kegiatan9.jpg" alt="">
             <div class="card-body">
-              <h4>IDR.200.000.000</h4>
-              <p class="mb-4 lh-sm">Jl. Soekarno Hatta no.1 <br> <span class="text-danger">Sewa</span> </p>
-            </div>
-            <div class="card-fasilitas d-flex justify-content-between px-4">
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Tidur.png" alt="">
-                <p>Kamar Tidur</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Kamar Mandi.png" alt="">
-                <p>Kamar Mandi</p>
-              </div>
-              <div>
-                <img src="<?php echo base_url('') ?>assets/img/Icon Luas Tanah.png" alt="">
-                <p>Luas Rumah</p>
-              </div>
+              <h4>Pengajian Abah Hasyim</h4>
+              <p class="mb-4 lh-sm">Ngaji Rutin Setiap Ramadan<br> </p>
             </div>
 
           </div>
         </div>
+
+
       </div>
     </div>
   </section>
@@ -291,8 +221,8 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h3>Butuh Konsultasi..?
-              Silahkan kontak kami
+            <h3>Ada Pertanyaan ?
+              Silahkan kontak
               Kami Siap Membantu</h3>
             <div class="kontak">
               <h6>Kontak</h6>
@@ -321,20 +251,10 @@
           </div>
 
           <div class="col-md-6">
-            <div class="card-contact w-100">
-              <form>
-                <h2>ada pertanyaan..?</h2>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput" class="d-flex align-items-center">Masukan email anda disini...</label>
-                </div>
-                <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                  <label for="floatingInput" class="d-flex align-items-center">Pertanyaan anda...</label>
-                </div>
-                <button type="submit" class="button-kontak">Kirim</button>
-
-              </form>
+            <div class="card-map border-radius">
+              
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d988.8727013777875!2d112.23582562362942!3d-7.521321020248477!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e783fe2251c2d35%3A0x4d177a80cc5635b!2sPondok%20Pesantren%20Al-Ikhlas%20Bahrul%20&#39;Ulum!5e0!3m2!1sid!2sid!4v1683873264140!5m2!1sid!2sid" width="600" height="450" style="border:0;" style="border-radius: 50px; overflow: hidden;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             
             </div>
           </div>
         </div>

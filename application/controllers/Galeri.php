@@ -48,9 +48,9 @@ class Galeri extends CI_Controller
 	public function proses_add()
 	{
 		// menerima inputan dari bagian view
-		// $gambar = ($this->input->post('gambar'));
+		// $gambar1 = ($this->input->post('gambar1'));
 		$judul = htmlspecialchars($this->input->post('judul'), ENT_QUOTES);
-		// $gambar = htmlspecialchars($this->input->post('gambar'), ENT_QUOTES);
+		// $gambar1 = htmlspecialchars($this->input->post('gambar1'), ENT_QUOTES);
 		$keterangan = htmlspecialchars($this->input->post('keterangan'), ENT_QUOTES);
 
 
@@ -75,12 +75,12 @@ class Galeri extends CI_Controller
 		$micro_time_array = explode(".", $micro_time);
 		$micro_time_array[1] = substr($micro_time_array[1], 0, 6);
 		$micro_time = implode("", $micro_time_array);
-		$filename = $date . $micro_time . '.' . pathinfo($_FILES['gambar']['name'], PATHINFO_EXTENSION);
+		$filename = $date . $micro_time . '.' . pathinfo($_FILES['gambar1']['name'], PATHINFO_EXTENSION);
 		$config['file_name'] = $filename;
 
 		$this->load->library('upload', $config);
 
-		if (!$this->upload->do_upload('gambar')) {
+		if (!$this->upload->do_upload('gambar1')) {
 			$meesageError = $this->upload->display_errors();
 			// echo "<pre>";
 			// var_dump($meesageError);
@@ -93,7 +93,7 @@ class Galeri extends CI_Controller
 		
 			$dataSimpan = [
 				"judul" => $judul,
-				"gambar" => $filename,
+				"gambar1" => $filename,
 				"keterangan" => $keterangan,
 
 

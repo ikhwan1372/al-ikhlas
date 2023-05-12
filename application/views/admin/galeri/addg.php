@@ -22,11 +22,8 @@
                                     <label for="image">Choose Image</label>
                                     <input type="file" name="gambar" id="gambar" class="form-control-file">
                                     <img id="preview" src="#" alt="Preview" style="display:none; max-width: 200px; max-height: 200px; margin-top: 10px;" />
-
                             </div>
-
                     </div>
-
                     <div class="form-groups">
                         <label for="keterangan">keterangan</label>
                         <input type="text" class="form-control" id="keterangan" name="keterangan" required>
